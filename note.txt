@@ -1,0 +1,10 @@
+python main.py -i template.xlsx -o r_dribble
+左手運球+補過場+右手運球
+改工具的groud truth(利用loss function的v)
+
+幫我用transformer，他可以輸入多個標籤後產生5幀的動作骨架，我的訓練資料有兩個，
+一個是放在data/split_train_data/pkl的動作檔(pkl檔)，每個動作骨架檔的格式是(frames, 45)，frames大概介於10~30，
+45是15個關節點的xyz座標，另外一個是放在data/split_train_data/txt的標籤檔(csv檔)，
+裡面的格式是像這樣的"hand,first_max_height,min_height,second_max_height,dribbling_frequency,
+bending_angle,duration 0,0.34820687770843506,0.34820687770843506,0.37221091985702515,15.0,13.891504065440703,3 " 
+每個動作檔會有對應的標籤檔，檔名一樣只是副檔名不一樣
